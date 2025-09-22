@@ -1,3 +1,14 @@
 <p>Hello, {{ name }} !</p>
 
 <button [attr.aria-label]="ariaLabel" (click)="send()">cu</button>
+
+@if(mustShowTitle) {
+<h1>My Title</h1>
+} @else {
+<h1>veio nada</h1>
+}
+
+<!-- Basically, it's comparable to the react "key"  -->
+@for(item of listItems; track item.id){
+<p>{{item}}</p>
+}
