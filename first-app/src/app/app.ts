@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, EventEmitter, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home';
 
@@ -10,4 +10,7 @@ import { HomeComponent } from './components/home/home';
 })
 export class App {
   protected readonly title = signal('first-app');
+  login(event: string) {
+    console.log(event);
+  }
 }
